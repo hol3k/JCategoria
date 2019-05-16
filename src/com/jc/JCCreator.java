@@ -8,9 +8,8 @@ import java.io.IOException;
 public class JCCreator {
 
     public static void createFile(final String fileName) {
-        File file = new File(fileName);
         try {
-            file.createNewFile();
+            FileUtils.touch(new File(fileName));
         } catch (IOException e) {
             e.printStackTrace();
         }
